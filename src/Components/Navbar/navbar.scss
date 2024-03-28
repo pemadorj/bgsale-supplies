@@ -1,0 +1,153 @@
+@import '../../responsive.scss';
+@import '../../color.scss';
+
+nav {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+        flex: 1;
+        margin-left: 10px;
+        font-weight: bold;
+        font-size: 24px;
+
+        @include md {
+            font-size: 20px;
+        }
+
+        @include sm {
+            flex: none;
+            font-size: 18px;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            transition: all 0.4s ease;
+
+            &:hover {
+                transform: scale(1.05); // Changed from 'scale' to 'transform'
+            }
+
+            img {
+                width: 54px;
+                height: 54px;
+                background-color: white;
+                border-radius: 50%;
+
+                @include sm {
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+        }
+    }
+
+    .right {
+        flex: 2;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;
+
+        .desktop-view {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            font-size: 20px;
+
+            @include md {
+                gap: 20px;
+                font-size: 16px;
+            }
+
+            @include sm {
+                display: none;
+            }
+
+            a {
+                transition: all 0.4s ease;
+
+                &:hover {
+                    transform: scale(1.05); 
+                }
+            }
+
+            button {
+                padding: 20px;
+                border-radius: 10%;
+                border: none;
+                transition: all 0.4s ease;
+                cursor: pointer;
+                background-color: white;
+                font-size: 20px;
+
+                @include md {
+                    font-size: 16px;
+                    padding: 10px;
+                }
+            }
+
+            button:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        .menu-icon {
+            display: none;
+            z-index: 999;
+            img {
+                width: 36px;
+                height: 36px;
+                cursor: pointer;
+            }
+
+            @include sm {
+                display: inline;
+            }
+        }
+
+        .menu {
+            position: absolute;
+            top: 0;
+            right: -50%;
+            width: 50%;
+            height: 100vh;
+            background-color: $primary; 
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            &.active {
+                right: 0;
+            }
+            .links {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+                margin-bottom: 50px;
+
+                a {
+                    transition: all 0.4s ease;
+    
+                    &:hover {
+                        transform: scale(1.05); 
+                    }
+                } 
+            }
+
+            button {
+                padding: 10px;
+                font-size: 20px;
+                border-radius: 10px;
+            }
+            
+        }
+    }
+}

@@ -1,3 +1,5 @@
+import Footer from '../../Components/Footer/Footer'
+import Navbar from '../../Components/Navbar/Navbar'
 import './layout.scss'
 import { Outlet } from 'react-router-dom'
 
@@ -6,8 +8,8 @@ function Layout(){
     /** Main Layout */
     <div className='layout'>
         {/* Navbar section  */}
-        <div className='navbar'>
-
+        <div className='navbar-section'>
+          <Navbar/>
         </div>
         {/* Content section  */}
         <div className='content'>
@@ -15,8 +17,8 @@ function Layout(){
             <Outlet/> 
         </div>
         {/* Footer section  */}
-        <div className='footer'>
-
+        <div className='footer-section'>
+          <Footer/>
         </div>
         
     </div>

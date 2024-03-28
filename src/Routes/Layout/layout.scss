@@ -1,0 +1,30 @@
+@import '../../responsive.scss';
+@import '../../color.scss';
+.layout {
+    margin: 0px 50px;
+
+   @include sm {
+       margin: 0;
+   }
+
+    .navbar-section {
+        background-color: $primary;
+        color: white;
+
+       @include sm {
+           height: 80px;
+        }
+    }
+
+    .content {
+        height: calc(100vh - 100px);
+        @include sm {
+            height: calc(100vh - 80px);
+         }
+    }
+
+    .footer-section {
+        height: 90px;
+        background-color:chocolate;
+    }
+}
