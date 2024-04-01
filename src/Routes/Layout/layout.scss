@@ -2,29 +2,16 @@
 @import '../../color.scss';
 .layout {
     margin: 0px 50px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 
-   @include sm {
-       margin: 0;
-   }
-
-    .navbar-section {
-        background-color: $primary;
-        color: white;
-
-       @include sm {
-           height: 80px;
-        }
+    @include sm {
+        margin: 0;
     }
 
-    .content {
-        height: calc(100vh - 100px);
-        @include sm {
-            height: calc(100vh - 80px);
-         }
+    .contents {
+        background-color: $white-bg;
     }
-
-    .footer-section {
-        height: 90px;
-        background-color:chocolate;
-    }
+    
 }
