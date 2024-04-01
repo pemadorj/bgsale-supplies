@@ -127,9 +127,11 @@ nav {
             justify-content: center;
             flex-direction: column;
             z-index: 999;
+            transition: all 1.5s ease-in;
 
             &.active {
                 right: 0;
+                scale: 1s;
             }
             .links {
                 display: flex;

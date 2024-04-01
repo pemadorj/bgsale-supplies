@@ -11,7 +11,6 @@ function Home(){
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quae mollitia repudiandae modi, rem dolor non assumenda iusto quisquam provident cumque. Ab nostrum exercitationem, beatae repellat quae animi optio hic!</p>
       </div>
       <Footer/>
-
     </div>
   );
 }

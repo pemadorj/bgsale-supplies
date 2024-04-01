@@ -1,3 +1,4 @@
+@import '../../responsive.scss';
 .hero {
     height: calc(100vh - 100px);
     background: linear-gradient(rgba(8,0,58,0.2),rgba(8,0,58,0.6)), url('../../assets/hero.png');
@@ -8,15 +9,37 @@
     justify-content: center;
     gap: 20px;
     align-items: center;
-    color: white;
+    color: #fff;
 
     .text-section {
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        gap: 20px;
         padding: 0px 80px;
+
+        h1{
+            font-size: 38px;
+            font-weight: 700;
+
+            @include md {
+                font-size: 34px;
+            }
+            @include sm {
+                font-size: 28px;
+                font-weight: 600;
+            }
+        }
+
+        p {
+            font-size: 24px;
+            font-weight: 800;
+            color: #41EAD4;
+            @include sm {
+                display: none;
+            }
+        }
+        
     }
 
     a {
@@ -29,6 +52,13 @@
         gap: 2px;
         border: none;
         cursor: pointer;
+        transition: all 1.04s ease-out;
+
+        &:hover {
+            background-color: #FF9F1C;
+            color: white;
+            scale: 1.3s;
+        }
     }
 
 }

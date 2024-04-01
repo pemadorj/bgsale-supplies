@@ -5,12 +5,9 @@ function Hero(){
   return (
     <div className='hero'>
         <div className="text-section">
-            <h1>Simplifying your hardware infrastructure management</h1>
-            <p>Are you struggling to maintain accurate documentation 
-                for your computer and hardware networking infrastructure? 
-                Let us take the hassle out of network documentation 
-                with our comprehensive services tailored to your needs.
-            </p>
+            <h1>Simplifying Your Hardware Infrastructure Management</h1>
+            <p>Struggling with network documentation?</p>
+            <p> Let us handle it hassle-free with tailored services.</p>
         </div>
         <a  href="/service" className='btn'>Explore more <FaArrowRight className='right-arrow' /></a>
     </div>
